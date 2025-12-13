@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0f2027">
+    <title>calculator📱</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="display-container">
+                <div class="display-history" id="history"></div>
+                <div class="display" id="display">0</div>
+            </div>
+            
+            <div class="mode-toggle">
+                <button class="mode-btn active" id="basicMode">Basic</button>
+                <button class="mode-btn" id="scientificMode">Scientific</button>
+            </div>
+
+            <div class="buttons" id="basicButtons">
+                <button class="btn clear" onclick="clearAll()">C</button>
+                <button class="btn clear" onclick="clearEntry()">CE</button>
+                <button class="btn operator" onclick="deleteLast()">⌫</button>
+                <button class="btn operator" onclick="appendOperator('/')">÷</button>
+                
+                <button class="btn number" onclick="appendNumber('7')">7</button>
+                <button class="btn number" onclick="appendNumber('8')">8</button>
+                <button class="btn number" onclick="appendNumber('9')">9</button>
+                <button class="btn operator" onclick="appendOperator('*')">×</button>
+                
+                <button class="btn number" onclick="appendNumber('4')">4</button>
+                <button class="btn number" onclick="appendNumber('5')">5</button>
+                <button class="btn number" onclick="appendNumber('6')">6</button>
+                <button class="btn operator" onclick="appendOperator('-')">−</button>
+                
+                <button class="btn number" onclick="appendNumber('1')">1</button>
+                <button class="btn number" onclick="appendNumber('2')">2</button>
+                <button class="btn number" onclick="appendNumber('3')">3</button>
+                <button class="btn operator" onclick="appendOperator('+')">+</button>
+                
+                <button class="btn number zero" onclick="appendNumber('0')">0</button>
+                <button class="btn number" onclick="appendNumber('.')">.</button>
+                <button class="btn equals" onclick="calculate()">=</button>
+            </div>
+
+            <div class="buttons scientific" id="scientificButtons" style="display: none;">
+                <button class="btn scientific-btn" onclick="scientificFunction('sin')">sin</button>
+                <button class="btn scientific-btn" onclick="scientificFunction('cos')">cos</button>
+                <button class="btn scientific-btn" onclick="scientificFunction('tan')">tan</button>
+                <button class="btn scientific-btn" onclick="scientificFunction('log')">log</button>
+                <button class="btn scientific-btn" onclick="scientificFunction('ln')">ln</button>
+                
+                <button class="btn scientific-btn" onclick="scientificFunction('asin')">sin⁻¹</button>
+                <button class="btn scientific-btn" onclick="scientificFunction('acos')">acos</button>
+                <button class="btn scientific-btn" onclick="scientificFunction('atan')">tan⁻¹</button>
+                <button class="btn scientific-btn" onclick="appendOperator('^')">x^y</button>
+                <button class="btn scientific-btn" onclick="scientificFunction('sqrt')">√</button>
+                
+                <button class="btn scientific-btn" onclick="scientificFunction('exp')">e^x</button>
+                <button class="btn scientific-btn" onclick="scientificFunction('pow10')">10^x</button>
+                <button class="btn scientific-btn" onclick="appendNumber('(')">(</button>
+                <button class="btn scientific-btn" onclick="appendNumber(')')">)</button>
+                <button class="btn scientific-btn" onclick="scientificFunction('factorial')">n!</button>
+                
+                <button class="btn scientific-btn" onclick="scientificFunction('pi')">π</button>
+                <button class="btn scientific-btn" onclick="scientificFunction('e')">e</button>
+                <button class="btn scientific-btn" onclick="scientificFunction('abs')">|x|</button>
+                <button class="btn scientific-btn" onclick="appendOperator('%')">%</button>
+                <button class="btn scientific-btn" onclick="scientificFunction('1/x')">1/x</button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p class="footer-text">
+            <span class="footer-name">ADNAN HASSAN</span>
+            <span class="footer-separator">•</span>
+            <span class="footer-brand">ProCodrr</span>
+            <span class="footer-separator">•</span>
+            <span class="footer-role">Frontend Developer(Apexcify)</span>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
